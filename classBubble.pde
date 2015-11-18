@@ -61,7 +61,7 @@ class Ball {
   
   void display() {
     noStroke();
-    fill(colorR,colorG,colorB,opacity);
+    fill(colors[currentColor][0],colors[currentColor][1],colors[currentColor][2],opacity);
     ellipse(x, y, diameter, diameter);
   }
 }
