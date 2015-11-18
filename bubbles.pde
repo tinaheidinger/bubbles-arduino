@@ -3,6 +3,7 @@ float spring = 0.05;
 float gravity = 0.01;
 float friction = -0.9;
 int colorR, colorG, colorB;
+int gravityDirection = 180;
 
 Ball[] balls = new Ball[numBalls];
 
@@ -23,4 +24,9 @@ void draw() {
     ball.move();
     ball.display();
   }
+}
+
+void keyPressed() {
+  gravityDirection = (gravityDirection + 45) % 360;
+  println(gravityDirection);
 }

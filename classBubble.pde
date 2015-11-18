@@ -38,7 +38,9 @@ class Ball {
   }
   
   void move() {
-    vy += gravity;
+    vx += (gravity * sin(180 - gravityDirection));
+    vy += (gravity * sin(gravityDirection - 90));
+    //vy += gravity;
     x += vx;
     y += vy;
     if (x + diameter/2 > width) {
