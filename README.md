@@ -10,7 +10,7 @@
 
 ## Sources
 
-* Basic bouncing bobbles example https://processing.org/examples/bouncybubbles.html
+* Basic bouncy bubbles example https://processing.org/examples/bouncybubbles.html
 
 ## Custom-built parts
 
