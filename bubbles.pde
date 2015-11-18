@@ -21,7 +21,7 @@ void draw() {
   for (Ball ball : balls) {
     ball.collide();
     ball.move();
-    ball.display();  
+    ball.display();
   }
 }
 
@@ -31,9 +31,8 @@ class Ball {
   float diameter;
   float vx = 0;
   float vy = 0;
-  float opacity = 255;
+  float opacity;
   int id;
-  int colR, colG, colB;
   Ball[] others;
  
   Ball(float xin, float yin, float din, int idin, float opac, Ball[] oin) {
