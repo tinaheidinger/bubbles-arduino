@@ -1,6 +1,6 @@
 int numBalls = 12;
-float spring = 0.05;
-float gravity = 0.01;
+float spring = 0.01;
+float gravity = 0.2;
 float friction = -0.9;
 int colorR, colorG, colorB;
 
