@@ -1,12 +1,15 @@
 int numBalls = 12;
-float spring = 0.05;
-float gravity = 0.01;
+float spring = 0.01;
+float gravity = 0.2;
 float friction = -0.9;
 int colorR, colorG, colorB;
+
 int[][] colors = { {81,189,244}, {154,226,109}, {250,237,115}, {248,103,105}, {64,64,64} };
 int currentColor = 0;
 int backgroundColor = 255;
 int timeout = 0;
+
+int gravityDirection = 180;
 
 Ball[] balls = new Ball[numBalls];
 
@@ -25,7 +28,6 @@ void draw() {
     ball.move();
     ball.display();
   }
-  
   changeColor();
   
   darkenBackground(0);
@@ -56,4 +58,9 @@ void changeColor() {
     currentColor = newColor;
     timeout = 0;
   } else { timeout++; }
+}
+
+void keyPressed() {
+  gravityDirection = (gravityDirection + 45) % 360;
+  println(gravityDirection);
 }
