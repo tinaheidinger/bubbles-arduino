@@ -148,5 +148,5 @@ void setGravityDegrees(float degrees) {
 void keyPressed() {
   
   gravityDirection = (gravityDirection + 45) % 360;
-  //println(gravityDirection);
+
 }
