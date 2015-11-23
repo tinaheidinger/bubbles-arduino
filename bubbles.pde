@@ -37,14 +37,14 @@ void draw() {
 void darkenBackground(int newBackground) {
   if (backgroundColor > newBackground) {
     backgroundColor--;
-    println(backgroundColor);
+    //println(backgroundColor);
   }
 }
 
 void brightenBackground(int newBackground) {
   if (backgroundColor < newBackground) {
     backgroundColor++;
-    println(backgroundColor);
+    //println(backgroundColor);
   }
 }
 
@@ -62,5 +62,4 @@ void changeColor() {
 
 void keyPressed() {
   gravityDirection = (gravityDirection + 45) % 360;
-  println(gravityDirection);
 }
