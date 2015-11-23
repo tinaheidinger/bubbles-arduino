@@ -8,7 +8,7 @@
 
 ## Project Description
 
-We implemented bubbles that bounce towards their gravity. The gravity direction can be adjusted with a gyroscope that is attached to an arduino.
+We implemented bubbles that bounce towards their gravity. The gravity direction can be adjusted with a gyroscope that is attached to an arduino. Plus, the bubbles change their color when the gravity has been changed.
 
 ## Sources
 
