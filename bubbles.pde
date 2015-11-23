@@ -25,12 +25,13 @@ int thresholdY = 13000;
 int canvasWidth = 640;
 int canvasHeight = 360;
 
+int millisCounter = millis();
+
 Ball[] balls = new Ball[numBalls];
 
 void setup() {
   String portName = Serial.list()[1];
   serialPort = new Serial(this, portName, 9600);
-  
   
   size(1000, 650);
   for (int i = 0; i < numBalls; i++) {
@@ -38,15 +39,12 @@ void setup() {
   }
 }
 
-int millisCounter = millis();
-
 void draw() {
-  
   background(backgroundColor);
   
   if ( serialPort.available() > 0) {
     serialVal = serialPort.readStringUntil('\n');
-    if (serialVal != null /*&& frameCounter==frameInterval*/) {
+    if (serialVal != null) {
       String[] XYZ = split(serialVal, ",") ;
       if (XYZ.length == 3) {
         serialX = parseInt(XYZ[0]);
@@ -98,9 +96,6 @@ void draw() {
   
   float markerX = centerX + distance * sin(gravityDirection);
   float markerY = centerY + distance * cos(gravityDirection);
-  
-  //fill(255,0,0);
-  //ellipse(markerX, markerY, 10,10 );
 }
 
 void darkenBackground(int newBackground) {
